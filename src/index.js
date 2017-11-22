@@ -59,8 +59,8 @@ export default class ReactPasswordStrength extends React.Component {
   render() {
     require('./style.css');
 
-    const { score, password, isValid } = this.state;
-
+    const { score, isValid } = this.state;
+    const password = this.props.inputProps.value !== undefined ? this.props.inputProps.value : this.state.password
     const {
       scoreWords,
       inputProps,
