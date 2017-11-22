@@ -3,13 +3,13 @@ import zxcvbn from 'zxcvbn';
 import PropTypes from 'prop-types';
 
 export default class ReactPasswordStrength extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       score: 0,
       isValid: false,
-      password: '',
+      password: props.inputProps.value || '',
     };
   }
 
